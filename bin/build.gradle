@@ -27,4 +27,5 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'commons-codec', name: 'commons-codec', version: '1.13'
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 }

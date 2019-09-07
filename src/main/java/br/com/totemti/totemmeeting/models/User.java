@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -22,6 +23,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "users_seq")
 	private Long id;
 	
+	@Size(min = 3, message = "O nome deve ter no mínimo 3 caracteres.")
 	@Getter @Setter
 	private String name;
 	
